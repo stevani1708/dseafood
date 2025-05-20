@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Pesanan</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Link CSS external -->
+  <link rel="stylesheet" href="/css/ikanguramegoreng.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="back" onclick="history.back()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Detail Pesanan
+    </div>
+
+    <div class="image-container">
+      <img src="/image/pasta udang.jpg" alt="Pasta Udang Alpukat" />
+    </div>
+
+    <h1>Pasta Udang Alpukat</h1>
+
+    <div class="price-rating">
+      <div>Rp 30.000</div>
+      <div class="rating">
+        <svg viewBox="0 0 24 24" fill="#f9d243" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>
+        4.3
+      </div>
+    </div>
+
+    <p class="description">
+      perpaduan unik pasta lembut, udang juicy dan saus alpukat creamy 
+    </p>
+
+    <div class="section">
+      <h2>Jenis pasta</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="spagetthi" name="Jenis pasta" />
+          <label for="spagetthi">
+            spagetthi
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="fettuccine" name="Jenis pasta" checked />
+          <label for="fettuccine">
+            fettuccine
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="fusilli" name="Jenis pasta" />
+          <label for="fusilli">
+            fusilli
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <h2>tambahan</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="keju parmesan" name="tambahan" />
+          <label for="keju parmesan">
+            keju parmesan
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="telur setengah matang" name="tambahan" />
+          <label for="telur setengah matang">
+           telur setengah matang
+            <div class="price">(Rp 5.000)</div>
+          </label>
+        </div>
+      </div>  
+
+     <div class="section">
+      <h2>tingkat kepedasan</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="pedas" name="sambel" />
+          <label for="pedas">pedas</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="tidak-pedas" name="sambel" />
+          <label for="tidak-pedas">tidak pedas</label>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="btn-add" type="button" aria-label="Tambah ke keranjang">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4a3d1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        <line x1="10" y1="10" x2="16" y2="10"></line>
+        <line x1="13" y1="7" x2="13" y2="13"></line>
+      </svg>
+    </button>
+  </div>
+</body>
+</html>

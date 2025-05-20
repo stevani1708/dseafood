@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Pesanan</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Link CSS external -->
+  <link rel="stylesheet" href="/css/paketfamily.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="back" onclick="history.back()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Detail Pesanan
+    </div>
+
+    <div class="image-container">
+      <img src="/image/Seafood Gabrugan.jpg" alt="Paket Family" />
+    </div>
+
+    <h1>Paket Family</h1>
+
+    <div class="price-rating">
+      <div>Rp 135.000</div>
+      <div class="rating">
+        <svg viewBox="0 0 24 24" fill="#f9d243" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>
+        4.9
+      </div>
+    </div>
+
+    <p class="description">
+      Paket Family adalah menu seafood lengkap untuk 3-4 orang yang berisi kepiting segar ukuran besar, udang manis dan kenyal, kerang hijau dan kerang dara, cumi-cumi lembut, serta jagung manis rebus yang semuanya dimasak dengan bumbu saus Padang pedas manis yang kaya rempah.
+    </p>
+
+    <div class="section">
+      <h2>nasi (4)</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="nasi-biasa" name="nasi" />
+          <label for="nasi-biasa">
+            nasi biasa
+            <div class="price">(Rp 0)</div>
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="nasi-uduk" name="nasi" checked />
+          <label for="nasi-uduk">
+            nasi uduk
+            <div class="price">(Rp 5.000)</div>
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="tanpa-nasi" name="nasi" />
+          <label for="tanpa-nasi">
+            tanpa nasi
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>tambahan</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="jagung-manis" name="tambahan" />
+          <label for="jagung-manis">
+            jagung manis
+            <div class="price">(Rp 5.000)</div>
+          </label>
+        </div>
+        <div class="option">
+          <input type="radio" id="telur-dadar" name="tambahan" />
+          <label for="telur-dadar">
+            telur dadar iris
+            <div class="price">(Rp 5.000)</div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>tingkat kepedasan</h2>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="pedas-banget" name="kepedasan" />
+          <label for="pedas-banget">pedas banget</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="pedas" name="kepedasan" />
+          <label for="pedas">pedas</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="tidak-pedas" name="kepedasan" checked />
+          <label for="tidak-pedas">tidak pedas</label>
+        </div>
+      </div>
+    </div>
+
+    <button
+  class="btn-add"
+  type="button"
+  aria-label="Tambah ke keranjang"
+  data-menu="Paket Family –  Paket Family adalah menu seafood lengkap untuk 3-4 orang"
+  onclick="showOrderPopup(this)">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#4a3d1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="21" r="1"></circle>
+    <circle cx="20" cy="21" r="1"></circle>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    <line x1="10" y1="10" x2="16" y2="10"></line>
+    <line x1="13" y1="7" x2="13" y2="13"></line>
+  </svg>
+</button>
+
+
+<div id="popup" class="popup-overlay">
+  <div class="popup-content animate-popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h3>Pesanan Berhasil 🎉</h3>
+    <p id="popupText">Anda telah memesan:</p>
+    <button onclick="closePopup()" class="popup-ok">OK</button>
+  </div>
+</div>
+
+
+
+  <script>
+  // Fungsi untuk menampilkan popup dan isi pilihan user
+  function showSelectedMenu() {
+    const nasi = document.querySelector('input[name="nasi"]:checked');
+    const nasiText = nasi ? document.querySelector(`label[for="${nasi.id}"]`).innerText.trim() : "Belum pilih nasi";
+
+    const tambahan = document.querySelector('input[name="tambahan"]:checked');
+    const tambahanText = tambahan ? document.querySelector(`label[for="${tambahan.id}"]`).innerText.trim() : "Tanpa tambahan";
+
+    const pedas = document.querySelector('input[name="kepedasan"]:checked');
+    const pedasText = pedas ? document.querySelector(`label[for="${pedas.id}"]`).innerText.trim() : "Tidak pedas";
+
+    const message = `Anda telah memesan:\n- ${nasiText}\n- ${tambahanText}\n- ${pedasText}`;
+    
+    document.getElementById('popupText').innerText = message;
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  // Fungsi untuk menutup popup
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+
+
+
+</body>
+</html>

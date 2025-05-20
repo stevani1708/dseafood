@@ -1,0 +1,684 @@
+/* Reset & base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f1dfc9;
+  font-family: 'Playfair Display;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* ini supaya nav-links terdorong ke kanan */
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  flex-direction: row-reverse;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #00d1b2;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px; /* sesuaikan tinggi area hero */
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  z-index: 2;
+  width: 120px; /* sesuaikan ukuran */
+}
+
+.welcome {
+  padding: 20px;
+  margin-top: 0; /* Pastikan tidak ada margin-top besar */
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.voucher-slider {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 30px 20px;
+  background: linear-gradient(to right, #fef9f5, #fcebd9);
+  border-top: 2px dashed #d8b78f;
+  border-bottom: 2px dashed #d8b78f;
+  scroll-behavior: smooth;
+}
+
+/* Kontainer semua voucher */
+.voucher-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+  padding: 20px 0;
+}
+
+/* Desain setiap kartu voucher */
+.voucher-card {
+  background: linear-gradient(to bottom right, #fff8e7, #f0d9b5);
+  width: 320px;
+  height: 240px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 2px solid #e6c89c;
+  position: relative;
+}
+
+.voucher-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar dalam kartu */
+.voucher-card img {
+  width: 140px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Judul & teks */
+.voucher-card h4 {
+   font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 8px 0 4px;
+  color: #5a3e1b;
+  font-weight: 600;
+}
+
+.voucher-card p {
+   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #6c4b2d;
+  margin: 0;
+}
+
+/* Section judul */
+.voucher-section {
+  padding: 50px 20px;
+  background: #faeddc;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.voucher-title {
+   font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #3a2a15;
+}
+
+/* Wrapper untuk overflow */
+.voucher-wrapper {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.voucher-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.voucher-scroll-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent; /* Chrome/Safari/Opera */
+}
+
+.voucher-slider {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.voucher-slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent; /* Chrome, Safari, Opera */
+}
+
+
+
+
+/* Popup voucher */
+.voucher-popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff3e0;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .voucher-slider {
+    padding: 20px 10px;
+  }
+
+  .voucher-card {
+    width: 240px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .voucher-card img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .voucher-card h4 {
+    font-size: 18px;
+  }
+
+  .voucher-card p {
+    font-size: 14px;
+  }
+
+  .popup-content {
+    padding: 20px;
+  }
+
+  .voucher-title {
+    font-size: 26px;
+  }
+}
+
+
+
+/* Menu Section */
+.menu-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  letter-spacing: 0.15em;
+  font-weight: semibold;
+  color: #010101;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: left;       /* ubah dari center ke kiri */
+  margin-left: -300px;      /* tambahkan jarak kiri */
+}
+
+.menu-section h2 span {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+
+/* Menu Cards */
+.menu-card-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e6cea5;
+  padding: 25px;
+  border-radius: 30px;
+  position: relative;
+  width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+   transform: translateY(-6px);
+   letter-spacing: 0.20em;
+   box-shadow: o 14px 28px rgba(0, 0, 0.25);
+}
+
+.menu-card-horizontal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card-horizontal:active {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.image-container {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.overlay-shape {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 280px;
+  height: 280px;
+  background-color: #e6d0ae;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.line-dot {
+  width: 230px;
+  height: 2px;
+  background-color: black;
+  margin: 0 5px;
+  position: relative;
+}
+
+.line-dot::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+   margin-left: 20px; /* Atau 30px, 40px sesuai kebutuhan */
+}
+
+.menu-info h4 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin: 2;
+}
+
+.menu-info .price {
+  font-size: 1.4rem;
+  font-family: 'Judson', semibold;
+  margin-left: -3px;
+}
+
+.menu-info .rating {
+  font-size: 1.4rem;
+  font-family: 'Judson', bold;
+  margin-left: -27px;
+  color: black;
+}
+
+.menu-info .rating i {
+  color: gold;
+  margin-right: 0px;
+}
+
+
+.overlay-shape {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 160px;
+  height: 160px;
+  background-color: #caa573;
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+.menu-card {
+  font-family: 'Judson';
+  width: 700px; 
+  background-color: #e6d0ae;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.menu-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.menu-card .img-wrapper img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.menu-card .text-wrapper {
+  flex: 1;
+  font-family: 'Judson';
+  padding-left: 20px;
+  text-align: left;
+}
+
+.menu-name {
+  font-family: 'Judson';
+  letter-spacing: 0.10em;
+  font-size: 2.5rem;        /* memperbesar ukuran */
+  font-weight: 900;       /* membuat teks lebih tebal */
+  color: #000;            /* pastikan warna cukup kontras */
+  margin-bottom: 0.5rem;  /* beri spasi bawah */
+  line-height: 1.2;
+}
+
+
+.menu-price {
+  font-family: 'Judson';
+  font-weight: bold;
+  margin: 5px 0;
+  margin-left: 15px;
+  color: #222;
+  font-size: 1rem;
+}
+
+.menu-rating {
+  font-family: 'Judson';
+  color: #333;
+  font-size: 1rem;
+}
+
+.circle-icon {
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.circle-icon:hover {
+  transform: scale(1.2);
+  color: #00b894;
+}
+
+/* New Menu */
+.new-menu-card .text-wrapper {
+  position: relative;
+}
+
+.menu-title {
+  font-family: 'Judson', serif;
+  font-weight: 800; /* Bold */
+  font-size: 2.5rem;
+  letter-spacing: 0.15em; /* 15% letter spacing */
+  margin-bottom: 10px;
+}
+
+
+.menu-desc {
+  font-family: 'Judson', serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.menu-old-price {
+  font-family: 'Judson', medium;
+  text-decoration: line-through;
+  color: #928080;
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.menu-discount {
+  background-color: #fcd34d;
+  font-family: 'Judson', medium;
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;   /* tombol di tengah */
+  align-items: center;
+  gap: 40px;                 /* jarak antar tombol */
+  flex-wrap: nowrap;        /* tetap sejajar */
+  margin: 30px 0;
+  padding-top: 60px; /* Alternatif lain, biar turun */
+}
+
+.category-buttons button {
+  font-family: 'Judson', serif;
+  font-weight: bold;
+  background: linear-gradient(135deg, #d6bfa2, #b89a77);
+  color: #fff;
+  border: none;
+  padding: 20px 40px;        /* ukuran lebih kecil */
+  border-radius: 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;       /* biar teks gak pecah */
+}
+
+.category-buttons button:hover {
+  background-color: #c4a989;
+  transform: scale(1.05);
+}
+.horizontal-divider {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.horizontal-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  background: linear-gradient(to right, #c4a989, #a87c4f);
+  z-index: 1;
+}
+
+.horizontal-divider span {
+  background-color: #f0e0cc; /* sama dengan background halaman */
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  font-family: 'Judson', bold;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #4b3e2b;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* .product-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s ease;
+} */
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;        /* Menjaga rasio persegi otomatis */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+.product-card h4 {
+  font-family: 'Judson', serif;
+  font-weight: bold;
+  margin: 12px 0 8px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.product-card .price {
+  font-family: 'Judson', serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #a87c4f;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terima-kasih-button {
+    background: linear-gradient(to right, #8c6e4c, #f4eadc);
+    color: #000;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    cursor: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terima-kasih-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tambahan responsive (di akhir CSS) */
+@media screen and (max-width: 800px) {
+  /* isi responsive-nya */
+}
