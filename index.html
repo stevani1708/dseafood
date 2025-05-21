@@ -26,12 +26,36 @@
     </div>
   </nav>
   
-
   <!-- Hero Section -->
-  <section class="hero">
-    <img src="/image/logo.png" alt="Logo DSeafood" class="logo">
-    <img src="/image/download.jpeg" alt="Hero Image" class="hero-img" />
-  </section>
+<section class="hero">
+  <img src="/image/logo.png" alt="Logo DSeafood" class="logo">
+  <img src="/image/download.jpeg" alt="Hero Image" class="hero-img" />
+</section>
+
+<!-- Form Input Alamat yang Lebih Estetik -->
+<section class="alamat-section" style="padding: 30px 20px; font-family: 'Judson', semibold; text-align: center; background-color: #F3E9DC;">
+  <h2 style="margin-bottom: 15px; font-size: 24px; color: #333;">Masukkan Alamat Pengiriman</h2>
+  <form action="#" method="post" style="max-width: px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <div style="display: flex; align-items: center; border: 2px solid #ccc; border-radius: 8px; padding: 10px;">
+      <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #009688;"></i>
+      <input 
+        type="text" 
+        name="alamat" 
+        placeholder="Contoh: Jl. Ikan Hiu No. 12, Surabaya" 
+        required 
+        style="width: 100%; border: none; outline: none; font-size: 16px;" 
+      />
+    </div>
+    <button 
+      type="submit" 
+      style="margin-top: 15px; padding: 12px 25px; background-color: #C08552; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;"
+      onmouseover="this.style.backgroundColor='#F3E9DC'"
+      onmouseout="this.style.backgroundColor='#C08552'"
+    >
+      <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Simpan Alamat
+    </button>
+  </form>
+</section>
 
 
   <div class="voucher-section">
