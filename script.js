@@ -6,9 +6,13 @@ document.querySelectorAll('.fa-plus').forEach(icon => {
     alert('Ditambahkan ke keranjang!');
   });
 });
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+    }
   });
