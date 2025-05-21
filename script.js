@@ -6,3 +6,9 @@ document.querySelectorAll('.fa-plus').forEach(icon => {
     alert('Ditambahkan ke keranjang!');
   });
 });
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
