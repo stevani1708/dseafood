@@ -9,23 +9,28 @@
   <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+<nav class="navbar">
     <div class="container">
-      <div class="logo">D'seafood</div>
-      <ul class="nav-links">
+      <div class="logo">D&rsquo;seafood</div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
         <li><a href="/dseafood/html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
       </ul>
     </div>
   </nav>
-  
+
+
+
   <!-- Hero Section -->
 <section class="hero">
   <img src="/image/logo.png" alt="Logo DSeafood" class="logo">
@@ -435,6 +440,18 @@
     </ul>
   </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
 
 
   </body>
