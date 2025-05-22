@@ -33,34 +33,44 @@ body {
   transition: background 0.3s ease;
 }
 
+/* Container */
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
 }
 
+/* Logo */
 .navbar .logo {
   color: #fff;
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
-.navbar .nav-links {
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Nav Links */
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
   margin-left: auto;
-  /* ini supaya nav-links terdorong ke kanan */
 }
 
-.navbar .nav-links a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  flex-direction: row-reverse;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -68,9 +78,40 @@ body {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
   color: #00d1b2;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
 }
 
 
@@ -767,19 +808,23 @@ body {
 .footer-col.address {
   flex: 1 1 300px;
   padding: 20px 20px;
-  background-color: rgba(243, 233, 220, 0.03); /* krem transparan */
+  background-color: rgba(243, 233, 220, 0.03);
+  /* krem transparan */
   border-radius: 12px;
   box-shadow: 0 8px 12px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease;
 }
+
 .alamat-section {
-  background-color: #fef1e6; /* Sesuaikan dengan warna latar bawahmu */
+  background-color: #fef1e6;
+  /* Sesuaikan dengan warna latar bawahmu */
   padding: 40px 20px;
   text-align: center;
 }
 
 .alamat-card {
-  background-color: #ffffff; /* bisa juga diganti krem terang jika mau menyatu lebih halus */
+  background-color: #ffffff;
+  /* bisa juga diganti krem terang jika mau menyatu lebih halus */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 16px;
@@ -840,8 +885,7 @@ body {
     flex-direction: column;
   }
 
-  .menu-card-hor
-  izontal {
+  .menu-card-hor izontal {
     flex-direction: column;
     align-items: center;
     padding: 15px;
@@ -906,4 +950,3 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
-
