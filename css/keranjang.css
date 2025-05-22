@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eae0cf;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #eae0cf;
+}
+
+.back-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-right: 1rem;
+  color: #000;
+}
+
+.summary-bar {
+  background: #f3ebdb;
+  border-radius: 2rem;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cart-container {
+  padding: 1rem;
+}
+
+.cart-card {
+  background: #f9f4ed;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.cart-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.cart-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cart-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.qty button {
+  background-color: #e6ddd0;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.qty button:hover {
+  transform: scale(1.1);
+}
+
+.item-qty {
+  font-weight: bold;
+}
+
+.addons p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.total-final {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.checkout-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cart-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .qty {
+    justify-content: start;
+  }
+}

@@ -363,8 +363,8 @@ body {
 .menu-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 4.5rem;
-  letter-spacing: 0.15em;
-  font-weight: semibold;
+  letter-spacing: 0.20em;
+  font-weight: medium;
   color: #010101;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -385,9 +385,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #e6cea5;
+  background-color: #e6d0ae;
   padding: 25px;
-  border-radius: 30px;
+  border-radius: 20px;
   position: relative;
   width: 100%;
   max-width: 600px;
@@ -413,9 +413,9 @@ body {
 
 .image-container {
   position: relative;
-  width: 240px;
-  height: 240px;
-  border-radius: 40px;
+  width: 200px;
+  height: 190px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -423,7 +423,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 20px;
   z-index: 2;
   position: relative;
 }
@@ -431,20 +431,12 @@ body {
 .overlay-shape {
   position: absolute;
   top: -40px;
-  left: -40px;
+  left: -px;
   width: 280px;
   height: 280px;
   background-color: #e6d0ae;
   border-radius: 30px;
   z-index: 1;
-}
-
-.line-dot {
-  width: 230px;
-  height: 2px;
-  background-color: black;
-  margin: 0 5px;
-  position: relative;
 }
 
 .line-dot::after {
@@ -464,7 +456,7 @@ body {
   gap: 10px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin-left: 20px;
+  margin-left: 30px;
   /* Atau 30px, 40px sesuai kebutuhan */
 }
 
@@ -496,7 +488,7 @@ body {
 .overlay-shape {
   position: absolute;
   top: -30px;
-  left: 30px;
+  left: 40px;
   width: 160px;
   height: 160px;
   background-color: #caa573;
@@ -506,7 +498,7 @@ body {
 
 .menu-card {
   font-family: 'Judson';
-  width: 700px;
+  width: 550px;
   background-color: #e6d0ae;
   border-radius: 20px;
   display: flex;
@@ -647,9 +639,9 @@ body {
   background: linear-gradient(135deg, #d6bfa2, #b89a77);
   color: #fff;
   border: none;
-  padding: 20px 40px;
+  padding: 12px 25px;
   /* ukuran lebih kecil */
-  border-radius: 30px;
+  border-radius: 31px;
   font-size: 1.3rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -674,7 +666,7 @@ body {
   position: absolute;
   top: 50%;
   left: 5%;
-  width: 90%;
+  width: 80%;
   height: 4px;
   background: linear-gradient(to right, #c4a989, #a87c4f);
   z-index: 1;
@@ -688,7 +680,7 @@ body {
   z-index: 2;
   font-family: 'Judson', bold;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.1em;
   color: #4b3e2b;
 }
 
@@ -918,7 +910,7 @@ body {
 
   .category-buttons {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 
   .product-grid {

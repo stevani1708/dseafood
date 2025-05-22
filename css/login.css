@@ -44,7 +44,9 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    padding: 20px; /* Tambahan biar gak mepet di mobile */
 }
+
 
 /* Navbar */
 .navbar {
@@ -99,7 +101,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #f5e0c3;
+    color: #c6ab85;
 }
 
 .navbar i {
@@ -114,12 +116,16 @@ body {
     font-size: 18px;
     transition: transform 0.2s ease-in-out, color 0.3s;
 }
+
 /* Container utama */
 .container {
+    overflow-y: scroll;
     display: flex;
     background: rgba(255, 255, 255, 0.15);
-    width: 1200px; /* dari 1000px */
-    height: 750px;
+    max-width: 950px; /* dari 1200px */
+    width: 100%;
+    height: 550;     /* dari 750px */
+    max-height: 100vh;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -128,6 +134,17 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Allow page scrolling */
+html, body {
+    overflow-y: auto;
+    height: auto;
+}
+
+/* If the container should scroll within a fixed height */
+.container {
+    max-height: 100vh;
+    overflow-y: scroll;
+}
 
 /* Animasi Fade-in */
 @keyframes fadeIn {
@@ -143,16 +160,15 @@ body {
 
 /* Bagian gambar */
 .image-container {
-    width: 67%;
-    height: 100%;
+    width: 170%;
+    height: 110%;
     overflow: hidden; /* Pastikan gambar tidak keluar area */
     position: relative; 
 }
 
 .image-container img {
     position: absolute;
-    top: 0;
-    left: -20%; /* GESER ke kiri */
+    top: 100;
     width: 100%; /* PERBESAR */
     height: 100%;
     object-fit: cover;
@@ -170,7 +186,7 @@ body {
 }
 /* Bagian form dengan efek transparan */
 .form-container {
-    width: 55%;
+    width: 100%;
     padding: 50px;
     text-align: center;
     background: rgba(255, 255, 255, 0.2);
@@ -182,6 +198,22 @@ body {
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
     position: relative; /* untuk posisi top-icons */
 }
+.form-section {
+  width: 60%;
+  background-color: #f5e2cd; /* atau warna beige kamu */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  width: 80%;
+  max-width: 240px;
+  margin: 0 auto; /* biar tetap di tengah */
+  display: block;
+}
+
 
 h2 {
     font-size: 26px;
@@ -201,7 +233,7 @@ label {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
     color: #3d2b1f;
 }
 
@@ -215,16 +247,18 @@ label i {
 /* Input field dengan efek lebih smooth */
 input {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 6px 10px; /* padding atas-bawah lebih kecil */
+    height: 36px;       /* tinggi input lebih ramping */
+    margin-bottom: 12px;
     border: 2px solid rgba(209, 168, 124, 0.6);
-    border-radius: 10px;
+    border-radius: 8px;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     background: rgba(255, 255, 255, 0.3);
     transition: 0.3s;
     color: #3d2b1f;
 }
+
 
 input::placeholder {
     color: rgba(61, 43, 31, 0.6);
@@ -243,10 +277,10 @@ button {
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 button:hover {
