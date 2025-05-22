@@ -32,30 +32,32 @@
   <img src="/image/download.jpeg" alt="Hero Image" class="hero-img" />
 </section>
 
-<!-- Form Input Alamat yang Lebih Estetik -->
-<section class="alamat-section" style="padding: 30px 20px; font-family: 'Judson', semibold; text-align: center; background-color: #F3E9DC;">
-  <h2 style="margin-bottom: 15px; font-size: 24px; color: #333;">Masukkan Alamat Pengiriman</h2>
-  <form action="#" method="post" style="max-width: px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-    <div style="display: flex; align-items: center; border: 2px solid #ccc; border-radius: 8px; padding: 10px;">
-      <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #009688;"></i>
-      <input 
-        type="text" 
-        name="alamat" 
-        placeholder="Contoh: Jl. Ikan Hiu No. 12, Surabaya" 
-        required 
-        style="width: 100%; border: none; outline: none; font-size: 16px;" 
-      />
-    </div>
-    <button 
-      type="submit" 
-      style="margin-top: 15px; padding: 12px 25px; background-color: #C08552; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;"
-      onmouseover="this.style.backgroundColor='#F3E9DC'"
-      onmouseout="this.style.backgroundColor='#C08552'"
-    >
-      <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Simpan Alamat
-    </button>
-  </form>
-</section>
+<form action="#" method="post" 
+  style="max-width: 800px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center; justify-content: space-between;">
+  
+  <!-- Input alamat -->
+  <div style="flex: 1; display: flex; align-items: center; border: 2px solid #ccc; border-radius: 8px; padding: 10px;">
+    <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #009688;"></i>
+    <input 
+      type="text" 
+      name="alamat" 
+      placeholder="Contoh: Jl. Ikan Hiu No. 12, Surabaya" 
+      required 
+      style="width: 100%; border: none; outline: none; font-size: 16px;" 
+    />
+  </div>
+
+  <!-- Tombol simpan -->
+  <button 
+    type="submit" 
+    style="padding: 12px 25px; background-color: #C08552; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;"
+    onmouseover="this.style.backgroundColor='#F3E9DC'"
+    onmouseout="this.style.backgroundColor='#C08552'"
+  >
+    <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Simpan
+  </button>
+</form>
+
 
 
   <div class="voucher-section">
@@ -148,8 +150,6 @@
               <div class="overlay-shape"></div>
             </div>
 
-            <div class="line-dot"></div>
-
             <div class="menu-info">
               <h4>paket<br>family</h4>
               <p class="price">135k</p>
@@ -163,7 +163,7 @@
           <a href="html/udangcrispy.html" class="new-menu-card" style="text-decoration: none; color: inherit;">
             <div class="menu-card new-menu-card">
               <div class="img-wrapper">
-                <img src="image/udang crispy.jpg" alt="Udang Crispy">
+                <img src="/image/udang crispy.jpg" alt="Udang Crispy">
               </div>
               <div class="text-wrapper">
                 <h3 class="menu-title">NEW<br>MENU!</h3>
@@ -195,7 +195,7 @@
   <!-- Produk 1 -->
   <a href="html/lodeh.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/ikan lodeh.jpg" alt="Ikan lodeh">
+      <img src="/image/ikan lodeh.jpg" alt="Ikan lodeh">
       <h4>Ikan lodeh <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 19.000</p>
     </div>
@@ -204,7 +204,7 @@
   <!-- Produk 2 -->
   <a href="html/ikanguramegoreng.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/ikan gurame goreng.jpg" alt="Ikan gurame goreng">
+      <img src="/image/ikan gurame goreng.jpg" alt="Ikan gurame goreng">
       <h4>Ikan gurame goreng <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 32.000</p>
     </div>
@@ -213,7 +213,7 @@
   <!-- Produk 3 -->
   <a href="html/ikan bawal bakar.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/ikan bawal bakar.jpg" alt="Ikan Bawal Bakar">
+      <img src="/image/ikan bawal bakar.jpg" alt="Ikan Bawal Bakar">
       <h4>Ikan Bawal Bakar <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 36.000</p>
     </div>
@@ -222,7 +222,7 @@
   <!-- Produk 4 -->
   <a href="html/ikan nila goreng.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/nila.jpg" alt="Ikan Nila Goreng">
+      <img src="/image/nila.jpg" alt="Ikan Nila Goreng">
       <h4>Ikan Nila Goreng <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 37.000</p>
     </div>
@@ -231,7 +231,7 @@
   <!-- Produk 3 -->
   <a href="html/cumi bakar bumbu pdg.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/cumi bakar.jpg" alt="Cumi Bakar Bumbu Padang">
+      <img src="/image/cumi bakar.jpg" alt="Cumi Bakar Bumbu Padang">
       <h4>Cumi Bakar Bumbu Padang <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span>
       </h4>
       <p class="price">Rp 28.000</p>
@@ -241,7 +241,7 @@
   <!-- Produk 4 -->
   <a href="html/cumi sambel pete.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/cumi balado.jpg" alt="Cumi Sambel Pete">
+      <img src="/image/cumi balado.jpg" alt="Cumi Sambel Pete">
       <h4>Cumi Sambel Pete <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 18.000</p>
     </div>
@@ -250,7 +250,7 @@
   <!-- Produk 5 -->
   <a href="html/pasta udang alpukat.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/pasta udang.jpg" alt="Pasta Udang Alpukat">
+      <img src="/image/pasta udang.jpg" alt="Pasta Udang Alpukat">
       <h4>Pasta Udang Alpukat <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 30.000</p>
     </div>
@@ -259,7 +259,7 @@
   <!-- Produk 6 -->
   <a href="html/pastasalmonkejupr.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/pasta scallop.jpg" alt="Salmon Keju Prancis">
+      <img src="/image/pasta scallop.jpg" alt="Salmon Keju Prancis">
       <h4>Salmon Keju Prancis <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 36.000</p>
     </div>
@@ -274,7 +274,7 @@
   <a href="html/milkshakestroberi.html" style="text-decoration: none; color: inherit;">
     <div class="menu-card highlight-card">
       <div class="img-wrapper">
-        <img src="image/smoothies stroberi.jpg" alt="Milkshake Strawberry">
+        <img src="/image/smoothies stroberi.jpg" alt="Milkshake Strawberry">
       </div>
       <div class="text-wrapper">
         <p class="menu-name">Best<br>Seller</p>
@@ -291,7 +291,7 @@
   <!-- Produk 1 -->
   <a href="html/kuwut nipis.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/es kuwut.jpg" alt="Es Kuwut">
+      <img src="/image/es kuwut.jpg" alt="Es Kuwut">
       <h4>Es Kuwut <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 12.000</p>
     </div>
@@ -300,7 +300,7 @@
   <!-- Produk 2 -->
   <a href="html/esteh.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/es teh.jpg" alt="Es Teh">
+      <img src="/image/es teh.jpg" alt="Es Teh">
       <h4>Es Teh <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 4.000</p>
     </div>
@@ -309,7 +309,7 @@
   <!-- Produk 3 -->
   <a href="html/esjeruk.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/es jeruk.jpg" alt="Es Jeruk">
+      <img src="/image/es jeruk.jpg" alt="Es Jeruk">
       <h4>Es Jeruk <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 6.000</p>
     </div>
@@ -318,7 +318,7 @@
   <!-- Produk 4 -->
   <a href="html/esteller.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/es teller.jpg" alt="Es Teler">
+      <img src="/image/es teller.jpg" alt="Es Teler">
       <h4>Es Teler <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 16.000</p>
     </div>
@@ -327,15 +327,16 @@
   <!-- Produk 5 -->
   <a href="html/smoothisvarian.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/milkshake varian .jpg" alt="Smoothies Varian">
+      <img src="/image/milkshake varian .jpg" alt="Smoothies Varian">
       <h4>Smoothies Varian <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 12.000</p>
     </div>
   </a>
+
   <!-- Produk 6 -->
   <a href="html/" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/air minerall.jpg" alt="Air Mineral">
+      <img src="/image/air minerall.jpg" alt="Air Mineral">
       <h4>Air Mineral <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 4.000</p>
     </div>
@@ -344,7 +345,7 @@
   <!-- Produk 6 -->
   <a href="html/esdawet.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/es cendol.jpg" alt="Es Dawet">
+      <img src="/image/es cendol.jpg" alt="Es Dawet">
       <h4>Es Dawet <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 12.000</p>
     </div>
@@ -355,7 +356,7 @@
   <!-- Produk 1 -->
   <a href="html/churros.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/churros.jpg" alt="Churros">
+      <img src="/image/churros.jpg" alt="Churros">
       <h4>Churros <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
       <p class="price">Rp 15.000</p>
@@ -365,7 +366,7 @@
   <!-- Produk 2 -->
   <a href="html/cupcake.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/cupcake.jpg" alt="Cupcake">
+      <img src="/image/cupcake.jpg" alt="Cupcake">
       <h4>Cup Cake <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
       <p class="price">Rp 12.000</p>
@@ -375,7 +376,7 @@
   <!-- Produk 3 -->
   <a href="html/icecreambrownie.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/brownis eskrim.jpg" alt="Ice Cream Brownies">
+      <img src="/image/brownis eskrim.jpg" alt="Ice Cream Brownies">
       <h4>Ice Cream Brownies <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 18.000</p>
     </div>
@@ -384,7 +385,7 @@
   <!-- Produk 1 -->
   <a href="html/cheesecake.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-      <img src="image/cheesecake.jpg" alt="CheeseCake">
+      <img src="/image/cheesecake.jpg" alt="CheeseCake">
       <h4>CheeseCake <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
       <p class="price">Rp 26.000</p>
     </div>
