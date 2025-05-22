@@ -2,406 +2,442 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hero with Clean Navbar</title>
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap" rel="stylesheet">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero with Clean Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">MyWebsite</div>
-            <ul class="nav-links">
-                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
-                <li><a href="/dseafood/html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="/dseafood/image/download.jpeg" alt="Hero Image" class="hero-img" />
-    </section>
-
-
-<div class="voucher-section">
-  <h2 class="voucher-title">Temukan Voucher Menarik!</h2>
-  <div class="voucher-wrapper">
-    <div class="voucher-track" id="voucherTrack">
-
-    <!-- Voucher Slider Section -->
-<div class="voucher-slider">
-  <div class="voucher-container" id="voucherContainer">
-    <!-- Voucher 1 -->
-    <div class="voucher-card" onclick="openPopup('Diskon 20%')">
-      <img src="/dseafood/image/voucher_1.png" alt="Voucher 1">
-      <div class="voucher-info">
-        <h4>Diskon 20%</h4>
-        <p>Berlaku hingga 30 Juni</p>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">D'seafood</div>
+      <ul class="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+        <li><a href="html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+      </ul>
     </div>
-    <!-- Voucher 2 -->
-    <div class="voucher-card" onclick="openPopup('Gratis Es Teh')">
-      <img src="/dseafood/image/voucher_2.png" alt="Voucher 2">
-      <div class="voucher-info">
-        <h4>Gratis Es Teh</h4>
-        <p>Min. belanja 25k</p>
-      </div>
-    </div>
-    <!-- Voucher 3 -->
-    <div class="voucher-card" onclick="openPopup('Diskon 30% Seafood')">
-      <img src="/dseafood/image/voucher_3.png" alt="Voucher 3">
-      <div class="voucher-info">
-        <h4>Diskon 30% Seafood</h4>
-        <p>Hanya hari ini!</p>
-      </div>
-    </div>
-    <!-- Voucher 4 -->
-    <div class="voucher-card" onclick="openPopup('Buy 1 Get 1')">
-      <img src="/dseafood/image/voucher_4.png" alt="Voucher 4">
-      <div class="voucher-info">
-        <h4>Buy 1 Get 1</h4>
-        <p>Untuk semua minuman</p>
-      </div>
-    </div>
-    <!-- Voucher 5 -->
-    <div class="voucher-card" onclick="openPopup('Voucher Rp10.000')">
-      <img src="/dseafood/image/v5.jpg" alt="Voucher 5">
-      <div class="voucher-info">
-        <h4>Voucher Rp10.000</h4>
-        <p>Tanpa minimum pembelian</p>
-      </div>
-    </div>
-    <!-- Voucher 6 -->
-    <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
-      <img src="/dseafood/image/v6.jpg" alt="Voucher 6">
-      <div class="voucher-info">
-        <h4>Gratis Dessert</h4>
-        <p>Untuk 3 pengunjung pertama</p>
-      </div>
-    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+<section class="hero">
+  <img src="/image/logo.png" alt="Logo DSeafood" class="logo">
+  <img src="/image/download.jpeg" alt="Hero Image" class="hero-img" />
+</section>
 
-    <!-- Voucher 7 -->
-    <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
-      <img src="/dseafood/image/v7.jpg" alt="Voucher 6">
-      <div class="voucher-info">
-        <h4>Gratis Dessert</h4>
-        <p>Untuk 3 pengunjung pertama</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Voucher Popup -->
-<div class="voucher-popup" id="voucherPopup">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h3 id="popupTitle">Voucher Title</h3>
-    <p>Detail voucher akan ditampilkan di sini.</p>
-  </div>
-</div>
-
-
-    <!-- Menu Section -->
-    <section class="menu-section">
-        <h2>OUR<br><span>BEST SELLER!</span></h2>
-
-        <!-- Best Seller Card -->
-        <!-- Tambahkan di dalam body -->
-        <a href="/desafood/html/paketfamily.html" class="menu-card-horizontal" style="text-decoration: none; color: inherit;">
-  <div class="image-container">
-    <img src="/dseafood/image/Seafood Gabrugan.jpg" alt="Paket Family">
-    <div class="overlay-shape"></div>
+<form action="#" method="post" 
+  style="max-width: 800px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center; justify-content: space-between;">
+  
+  <!-- Input alamat -->
+  <div style="flex: 1; display: flex; align-items: center; border: 2px solid #ccc; border-radius: 8px; padding: 10px;">
+    <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #009688;"></i>
+    <input 
+      type="text" 
+      name="alamat" 
+      placeholder="Contoh: Jl. Ikan Hiu No. 12, Surabaya" 
+      required 
+      style="width: 100%; border: none; outline: none; font-size: 16px;" 
+    />
   </div>
 
-  <div class="line-dot"></div>
+  <!-- Tombol simpan -->
+  <button 
+    type="submit" 
+    style="padding: 12px 25px; background-color: #C08552; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;"
+    onmouseover="this.style.backgroundColor='#F3E9DC'"
+    onmouseout="this.style.backgroundColor='#C08552'"
+  >
+    <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Simpan
+  </button>
+</form>
 
-  <div class="menu-info">
-    <h4>paket<br>family</h4>
-    <p class="price">135k</p>
-    <p class="rating"><i class="fas fa-star"></i> 4.9</p>
-  </div>
 
-  <div class="circle-icon">⊕</div>
-</a>
 
-        <!-- New Menu Card -->
-         <a href="/desafood/html/udangcrispy.html" class="new-menu-card" style="text-decoration: none; color: inherit;">
-        <div class="menu-card new-menu-card">
-            <div class="img-wrapper">
-                <img src="/dseafood/image/udang crispy.jpg" alt="Udang Crispy">
+  <div class="voucher-section">
+    <h2 class="voucher-title">Temukan Voucher Menarik!</h2>
+    <div class="voucher-wrapper">
+      <div class="voucher-track" id="voucherTrack">
+
+        <!-- Voucher Slider Section -->
+        <div class="voucher-slider">
+          <div class="voucher-container" id="voucherContainer">
+            <!-- Voucher 1 -->
+            <div class="voucher-card" onclick="openPopup('Diskon 20%')">
+              <img src="/image/voucher_1.png" alt="Voucher 1">
+              <div class="voucher-info">
+                <h4>Diskon 20%</h4>
+                <p>Berlaku hingga 30 Juni</p>
+              </div>
             </div>
-            <div class="text-wrapper">
+            <!-- Voucher 2 -->
+            <div class="voucher-card" onclick="openPopup('Gratis Es Teh')">
+              <img src="/image/voucher_2.png" alt="Voucher 2">
+              <div class="voucher-info">
+                <h4>Gratis Es Teh</h4>
+                <p>Min. belanja 25k</p>
+              </div>
+            </div>
+            <!-- Voucher 3 -->
+            <div class="voucher-card" onclick="openPopup('Diskon 30% Seafood')">
+              <img src="/image/voucher_3.png" alt="Voucher 3">
+              <div class="voucher-info">
+                <h4>Diskon 30% Seafood</h4>
+                <p>Hanya hari ini!</p>
+              </div>
+            </div>
+            <!-- Voucher 4 -->
+            <div class="voucher-card" onclick="openPopup('Buy 1 Get 1')">
+              <img src="/image/voucher_4.png" alt="Voucher 4">
+              <div class="voucher-info">
+                <h4>Buy 1 Get 1</h4>
+                <p>Untuk semua minuman</p>
+              </div>
+            </div>
+            <!-- Voucher 5 -->
+            <div class="voucher-card" onclick="openPopup('Voucher Rp10.000')">
+              <img src="/image/v5.jpg" alt="Voucher 5">
+              <div class="voucher-info">
+                <h4>Voucher Rp10.000</h4>
+                <p>Tanpa minimum pembelian</p>
+              </div>
+            </div>
+            <!-- Voucher 6 -->
+            <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
+              <img src="/image/v6.jpg" alt="Voucher 6">
+              <div class="voucher-info">
+                <h4>Gratis Dessert</h4>
+                <p>Untuk 3 pengunjung pertama</p>
+              </div>
+            </div>
+
+            <!-- Voucher 7 -->
+            <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
+              <img src="/image/v7.jpg" alt="Voucher 6">
+              <div class="voucher-info">
+                <h4>Gratis Dessert</h4>
+                <p>Untuk 3 pengunjung pertama</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voucher Popup -->
+        <div class="voucher-popup" id="voucherPopup">
+          <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3 id="popupTitle">Voucher Title</h3>
+            <p>Detail voucher akan ditampilkan di sini.</p>
+          </div>
+        </div>
+
+
+        <!-- Menu Section -->
+        <section class="menu-section">
+          <h2>OUR<br><span>BEST SELLER!</span></h2>
+
+          <!-- Best Seller Card -->
+          <!-- Tambahkan di dalam body -->
+          <a href="html/paketfamily.html" class="menu-card-horizontal" style="text-decoration: none; color: inherit;">
+            <div class="image-container">
+              <img src="image/Seafood Gabrugan.jpg" alt="Paket Family">
+              <div class="overlay-shape"></div>
+            </div>
+
+            <div class="menu-info">
+              <h4>paket<br>family</h4>
+              <p class="price">135k</p>
+              <p class="rating"><i class="fas fa-star"></i> 4.9</p>
+            </div>
+
+            <div class="circle-icon">⊕</div>
+          </a>
+
+          <!-- New Menu Card -->
+          <a href="html/udangcrispy.html" class="new-menu-card" style="text-decoration: none; color: inherit;">
+            <div class="menu-card new-menu-card">
+              <div class="img-wrapper">
+                <img src="/image/udang crispy.jpg" alt="Udang Crispy">
+              </div>
+              <div class="text-wrapper">
                 <h3 class="menu-title">NEW<br>MENU!</h3>
                 <p class="menu-desc">udang crispy</p>
                 <p class="menu-old-price">24k</p>
                 <div class="menu-discount">20%</div>
                 <p class="menu-price">19,2k</p>
                 <p class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</p>
+              </div>
+              <div class="circle-icon">⊕</div>
             </div>
-            <div class="circle-icon">⊕</div>
-        </div>
-        </a>
+          </a>
 
-        <!-- Filter Buttons -->
-        <div class="category-buttons">
+          <!-- Filter Buttons -->
+          <div class="category-buttons">
             <button>Ikan</button>
             <button>Cumi</button>
             <button>Udang</button>
             <button>Desert</button>
             <button>Drinks</button>
-        </div>
-    </section>
+          </div>
+        </section>
 
 </html>
 <div class="horizontal-divider">
-    <span>BEST SELLER FAVORIT SEMUA ORANG</span>
+  <span>BEST SELLER FAVORIT SEMUA ORANG</span>
 </div>
- <div class="product-grid">
-        <!-- Produk 1 -->
-         <a href="/dseafood/html/lodeh.html" class="product-card" style="text-decoration: none; color: inherit;">
-        <div class="product-card">
-            <img src="/dseafood/image/ikan lodeh.jpg" alt="Ikan lodeh">
-            <h4>Ikan lodeh <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-            <p class="price">Rp 19.000</p>
-        </div>
-        </a>
-
-        <!-- Produk 2 -->
-         <a href="/dseafood/html/ikanguramegoreng.html" class="product-card" style="text-decoration: none; color: inherit;">
-        <div class="product-card">
-            <img src="/dseafood/image/ikan gurame goreng.jpg" alt="Ikan gurame goreng">
-            <h4>Ikan gurame goreng <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-            <p class="price">Rp 32.000</p>
-        </div>
-        </a>
-
-    <!-- Produk 3 -->
-      <a href="/dseafood/html/ikan bawal bakar.html" class="product-card" style="text-decoration: none; color: inherit;">
+<div class="product-grid">
+  <!-- Produk 1 -->
+  <a href="html/lodeh.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/ikan bawal bakar.jpg" alt="Ikan Bawal Bakar">
-        <h4>Ikan Bawal Bakar <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 36.000</p>
+      <img src="/image/ikan lodeh.jpg" alt="Ikan lodeh">
+      <h4>Ikan lodeh <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 19.000</p>
     </div>
-    </a>
+  </a>
 
-    <!-- Produk 4 -->
-      <a href="/dseafood/html/ikan nila goreng.html" class="product-card" style="text-decoration: none; color: inherit;">
+  <!-- Produk 2 -->
+  <a href="html/ikanguramegoreng.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/nila.jpg" alt="Ikan Nila Goreng">
-        <h4>Ikan Nila Goreng  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 37.000</p>
+      <img src="/image/ikan gurame goreng.jpg" alt="Ikan gurame goreng">
+      <h4>Ikan gurame goreng <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 32.000</p>
     </div>
-    </a>
+  </a>
 
-    <!-- Produk 3 -->
-      <a href="/dseafood/html/cumi bakar bumbu pdg.html" class="product-card" style="text-decoration: none; color: inherit;">
+  <!-- Produk 3 -->
+  <a href="html/ikan bawal bakar.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/cumi bakar.jpg" alt="Cumi Bakar Bumbu Padang">
-        <h4>Cumi Bakar Bumbu Padang  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 28.000</p>
+      <img src="/image/ikan bawal bakar.jpg" alt="Ikan Bawal Bakar">
+      <h4>Ikan Bawal Bakar <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 36.000</p>
     </div>
-    </a>
+  </a>
 
-    <!-- Produk 4 -->
-      <a href="/dseafood/html/cumi sambel pete.html" class="product-card" style="text-decoration: none; color: inherit;">
+  <!-- Produk 4 -->
+  <a href="html/ikan nila goreng.html" class="product-card" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/cumi balado.jpg" alt="Cumi Sambel Pete">
-        <h4>Cumi Sambel Pete  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 18.000</p>
+      <img src="/image/nila.jpg" alt="Ikan Nila Goreng">
+      <h4>Ikan Nila Goreng <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 37.000</p>
     </div>
-    </a>
+  </a>
 
-    <!-- Produk 5 -->
-      <a href="/dseafood/html/pasta udang alpukat.html" class="product-card" style="text-decoration: none; color: inherit;">
-     <div class="product-card">
-        <img src="/dseafood/image/pasta udang.jpg" alt="Pasta Udang Alpukat">
-            <h4>Pasta Udang Alpukat  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-            <p class="price">Rp 30.000</p>
-     </div>
-     </a>
+  <!-- Produk 3 -->
+  <a href="html/cumi bakar bumbu pdg.html" class="product-card" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/cumi bakar.jpg" alt="Cumi Bakar Bumbu Padang">
+      <h4>Cumi Bakar Bumbu Padang <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span>
+      </h4>
+      <p class="price">Rp 28.000</p>
+    </div>
+  </a>
 
-     <!-- Produk 6 -->
-       <a href="/dseafood/html/pastasalmonkejupr.html" class="product-card" style="text-decoration: none; color: inherit;">
-     <div class="product-card">
-        <img src="/dseafood/image/pasta scallop.jpg" alt="Salmon Keju Prancis">
-            <h4>Salmon Keju Prancis  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-            <p class="price">Rp 36.000</p>
-     </div>
-     </a>
+  <!-- Produk 4 -->
+  <a href="html/cumi sambel pete.html" class="product-card" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/cumi balado.jpg" alt="Cumi Sambel Pete">
+      <h4>Cumi Sambel Pete <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 18.000</p>
+    </div>
+  </a>
+
+  <!-- Produk 5 -->
+  <a href="html/pasta udang alpukat.html" class="product-card" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/pasta udang.jpg" alt="Pasta Udang Alpukat">
+      <h4>Pasta Udang Alpukat <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 30.000</p>
+    </div>
+  </a>
+
+  <!-- Produk 6 -->
+  <a href="html/pastasalmonkejupr.html" class="product-card" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/pasta scallop.jpg" alt="Salmon Keju Prancis">
+      <h4>Salmon Keju Prancis <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 36.000</p>
+    </div>
+  </a>
 
 
 </div>
 <div class="horizontal-divider">
-    <span>DRINKS AND DESSERT</span>
+  <span>DRINKS AND DESSERT</span>
 </div>
 <div class="menu-section">
-    <a href="/dseafood/html/milkshakestroberi.html" style="text-decoration: none; color: inherit;">
+  <a href="html/milkshakestroberi.html" style="text-decoration: none; color: inherit;">
     <div class="menu-card highlight-card">
-        <div class="img-wrapper">
-            <img src="/dseafood/image/smoothies stroberi.jpg" alt="Milkshake Strawberry">
-        </div>
-        <div class="text-wrapper">
-            <p class="menu-name">Best<br>Seller</p>
-             <h4>Milkshake Strawberry 🍓</h4>
-            <p class="menu-price">12k</p>
-            <p class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</p>
-        </div>
-        <div class="circle-icon">⊕</div>
-    </div>
-</div>
- </a>
-
-<div class="product-grid">
-    <!-- Produk 1 -->
-     <a href="/dseafoodhtml/kuwut nipis.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/dseafood/image/es kuwut.jpg" alt="Es Kuwut">
-        <h4>Es Kuwut  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 12.000</p>
-    </div>
-    </a>
-
-    <!-- Produk 2 -->
-     <a href="/dseafoodhtml/esteh.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/dseafood/image/es teh.jpg" alt="Es Teh">
-        <h4>Es Teh  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 4.000</p>
-    </div>
-    </a>
-
-    <!-- Produk 3 -->
-     <a href="/dseafood/html/esjeruk.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/dseafood/image/es jeruk.jpg" alt="Es Jeruk">
-        <h4>Es Jeruk  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 6.000</p>
-    </div>
-    </a>
-
-    <!-- Produk 4 -->
-     <a href="/dseafoodhtml/esteller.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/dseafood/image/es teller.jpg" alt="Es Teler">
-        <h4>Es Teler  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 16.000</p>
-    </div>
-    </a>
-
-    <!-- Produk 5 -->
-     <a href="/dseafood/html/smoothisvarian.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/dseafood/image/milkshake varian .jpg" alt="Smoothies Varian">
-        <h4>Smoothies Varian  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 12.000</p>
-    </div>
-    </a>
-
-    <!-- Produk 6 -->
-     <a href="/dseafood/html/" style="text-decoration: none; color: inherit;"></a>
-    <div class="product-card">
-        <img src="/image/air minerall.jpg" alt="Air Mineral">
-        <h4>Air Mineral  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 4.000</p>
-    </div>
-
-     <!-- Produk 6 -->
-      <a href="/dseafood/html/esdawet.html" style="text-decoration: none; color: inherit;">
-    <div class="product-card">
-        <img src="/image/es cendol.jpg" alt="Es Dawet">
-        <h4>Es Dawet  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 12.000</p>
+      <div class="img-wrapper">
+        <img src="/image/smoothies stroberi.jpg" alt="Milkshake Strawberry">
+      </div>
+      <div class="text-wrapper">
+        <p class="menu-name">Best<br>Seller</p>
+        <h4>Milkshake Strawberry 🍓</h4>
+        <p class="menu-price">12k</p>
+        <p class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</p>
+      </div>
+      <div class="circle-icon">⊕</div>
     </div>
 </div>
 </a>
 
 <div class="product-grid">
-    <!-- Produk 1 -->
-     <a href="/dseafood/html/churros.html" style="text-decoration: none; color: inherit;">
+  <!-- Produk 1 -->
+  <a href="html/kuwut nipis.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/churros.jpg" alt="Churros">
-        <h4>Churros  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-         <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
-        <p class="price">Rp 15.000</p>
+      <img src="/image/es kuwut.jpg" alt="Es Kuwut">
+      <h4>Es Kuwut <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 12.000</p>
     </div>
-    </a>
+  </a>
 
-     <!-- Produk 2 -->
-      <a href="/dseafood/html/cupcake.html" style="text-decoration: none; color: inherit;">
+  <!-- Produk 2 -->
+  <a href="html/esteh.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/cupcake.jpg" alt="Cupcake">
-        <h4>Cup Cake  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-         <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
-        <p class="price">Rp 12.000</p>
+      <img src="/image/es teh.jpg" alt="Es Teh">
+      <h4>Es Teh <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 4.000</p>
     </div>
-    </a>
+  </a>
 
-     <!-- Produk 3 -->
-      <a href="/dseafood/html/icecreambrownie.html" style="text-decoration: none; color: inherit;">
+  <!-- Produk 3 -->
+  <a href="html/esjeruk.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/brownis eskrim.jpg" alt="Ice Cream Brownies">
-        <h4>Ice Cream Brownies  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 18.000</p>
+      <img src="/image/es jeruk.jpg" alt="Es Jeruk">
+      <h4>Es Jeruk <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 6.000</p>
     </div>
-    </a>
+  </a>
 
-     <!-- Produk 1 -->
-      <a href="/dseafood/html/cheesecake.html" style="text-decoration: none; color: inherit;">
+  <!-- Produk 4 -->
+  <a href="html/esteller.html" style="text-decoration: none; color: inherit;">
     <div class="product-card">
-        <img src="/dseafood/image/cheesecake.jpg" alt="CheeseCake">
-        <h4>CheeseCake  <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
-        <p class="price">Rp 26.000</p>
+      <img src="/image/es teller.jpg" alt="Es Teler">
+      <h4>Es Teler <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 16.000</p>
     </div>
-    </a>
+  </a>
 
-<div class="center-container">
-  <button class="terima-kasih-button">Terima Kasih</button>
+  <!-- Produk 5 -->
+  <a href="html/smoothisvarian.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/milkshake varian .jpg" alt="Smoothies Varian">
+      <h4>Smoothies Varian <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 12.000</p>
+    </div>
+  </a>
+
+  <!-- Produk 6 -->
+  <a href="html/" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/air minerall.jpg" alt="Air Mineral">
+      <h4>Air Mineral <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 4.000</p>
+    </div>
+  </a>
+
+  <!-- Produk 6 -->
+  <a href="html/esdawet.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/es cendol.jpg" alt="Es Dawet">
+      <h4>Es Dawet <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 12.000</p>
+    </div>
 </div>
+</a>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // === FUNGSI POPUP VOUCHER ===
-    window.openPopup = function(title) {
-      document.getElementById('popupTitle').innerText = title;
-      document.getElementById('voucherPopup').style.display = 'flex';
-    }
+<div class="product-grid">
+  <!-- Produk 1 -->
+  <a href="html/churros.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/churros.jpg" alt="Churros">
+      <h4>Churros <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
+      <p class="price">Rp 15.000</p>
+    </div>
+  </a>
 
-    window.closePopup = function() {
-      document.getElementById('voucherPopup').style.display = 'none';
-    }
+  <!-- Produk 2 -->
+  <a href="html/cupcake.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/cupcake.jpg" alt="Cupcake">
+      <h4>Cup Cake <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="desc"><em>coklat, strawberry, tiramissu</em></p>
+      <p class="price">Rp 12.000</p>
+    </div>
+  </a>
 
-    // === SLIDER OTOMATIS ===
-    const track = document.getElementById('voucherTrack');
-    let scrollAmount = 0;
+  <!-- Produk 3 -->
+  <a href="html/icecreambrownie.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/brownis eskrim.jpg" alt="Ice Cream Brownies">
+      <h4>Ice Cream Brownies <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 18.000</p>
+    </div>
+  </a>
 
-    function autoSlide() {
-      if (!track) return;
+  <!-- Produk 1 -->
+  <a href="html/cheesecake.html" style="text-decoration: none; color: inherit;">
+    <div class="product-card">
+      <img src="/image/cheesecake.jpg" alt="CheeseCake">
+      <h4>CheeseCake <span class="menu-rating"><i class="fas fa-star" style="color: gold;"></i> 4.9</span></h4>
+      <p class="price">Rp 26.000</p>
+    </div>
+  </a>
 
-      scrollAmount += 1;
-      if (scrollAmount >= track.scrollWidth - track.clientWidth) {
-        scrollAmount = 0; // reset ke awal
-      }
-      track.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    }
+  <!-- Standalone Footer -->
+</div>
+  <footer class="footer">
+  <div class="footer-col brand">
+    <h2>D'seafood</h2>
+    <p>
+        Restoran seafood terbaik dengan cita rasa laut asli. Kami menyajikan hidangan segar langsung dari tangkapan harian nelayan lokal.
+    </p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
 
-    setInterval(autoSlide, 50); // kecepatan scroll
-  });
-</script>
+  <div class="footer-col">
+    <h3>MENU</h3>
+    <ul>
+      <li><a href="#">Paket Family</a></li>
+      <li><a href="#">Udang crispy</a></li>
+      <li><a href="#">Milkshake strawberry</a></li>
+      <li><a href="#">Churros</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h3>INFO</h3>
+    <ul>
+      <li><a href="#">Tentang kami</a></li>
+      <li><a href="#">Galeri</a></li>
+      <li><a href="#">Testimoni</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h3>LOKASI</h3>
+    <ul>
+      <li><a href="#">Jl. Laut Segar No. 12</a></li>
+      <li><a href="#">Jakarta Utara</a></li>
+      <li><a href="#"(021) 123-4567</a></li>
+      <li><a href="#">info@dseafood.com</a></li>
+    </ul>
+  </div>
+</footer>
 
 
+  </body>
 
-</body>
-
-</html>
+  </html>
