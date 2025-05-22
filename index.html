@@ -9,27 +9,32 @@
   <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+<nav class="navbar">
     <div class="container">
-      <div class="logo">D'seafood</div>
-      <ul class="nav-links">
-        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <div class="logo">D&rsquo;seafood</div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/dseafood/html/home.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
-        <li><a href="html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="/dseafood/html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
       </ul>
     </div>
   </nav>
-  
+
+
+
   <!-- Hero Section -->
 <section class="hero">
   <img src="/image/logo.png" alt="Logo DSeafood" class="logo">
-  <img src="/image/download.jpeg" alt="Hero Image" class="hero-img" />
+  <img src="image/download.jpeg" alt="Hero Image" class="hero-img" />
 </section>
 
 <form action="#" method="post" 
@@ -70,7 +75,7 @@
           <div class="voucher-container" id="voucherContainer">
             <!-- Voucher 1 -->
             <div class="voucher-card" onclick="openPopup('Diskon 20%')">
-              <img src="/image/voucher_1.png" alt="Voucher 1">
+              <img src="image/voucher_1.png" alt="Voucher 1">
               <div class="voucher-info">
                 <h4>Diskon 20%</h4>
                 <p>Berlaku hingga 30 Juni</p>
@@ -78,7 +83,7 @@
             </div>
             <!-- Voucher 2 -->
             <div class="voucher-card" onclick="openPopup('Gratis Es Teh')">
-              <img src="/image/voucher_2.png" alt="Voucher 2">
+              <img src="image/voucher_2.png" alt="Voucher 2">
               <div class="voucher-info">
                 <h4>Gratis Es Teh</h4>
                 <p>Min. belanja 25k</p>
@@ -86,7 +91,7 @@
             </div>
             <!-- Voucher 3 -->
             <div class="voucher-card" onclick="openPopup('Diskon 30% Seafood')">
-              <img src="/image/voucher_3.png" alt="Voucher 3">
+              <img src="image/voucher_3.png" alt="Voucher 3">
               <div class="voucher-info">
                 <h4>Diskon 30% Seafood</h4>
                 <p>Hanya hari ini!</p>
@@ -94,7 +99,7 @@
             </div>
             <!-- Voucher 4 -->
             <div class="voucher-card" onclick="openPopup('Buy 1 Get 1')">
-              <img src="/image/voucher_4.png" alt="Voucher 4">
+              <img src="image/voucher_4.png" alt="Voucher 4">
               <div class="voucher-info">
                 <h4>Buy 1 Get 1</h4>
                 <p>Untuk semua minuman</p>
@@ -102,7 +107,7 @@
             </div>
             <!-- Voucher 5 -->
             <div class="voucher-card" onclick="openPopup('Voucher Rp10.000')">
-              <img src="/image/v5.jpg" alt="Voucher 5">
+              <img src="image/v5.jpg" alt="Voucher 5">
               <div class="voucher-info">
                 <h4>Voucher Rp10.000</h4>
                 <p>Tanpa minimum pembelian</p>
@@ -110,7 +115,7 @@
             </div>
             <!-- Voucher 6 -->
             <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
-              <img src="/image/v6.jpg" alt="Voucher 6">
+              <img src="image/v6.jpg" alt="Voucher 6">
               <div class="voucher-info">
                 <h4>Gratis Dessert</h4>
                 <p>Untuk 3 pengunjung pertama</p>
@@ -119,7 +124,7 @@
 
             <!-- Voucher 7 -->
             <div class="voucher-card" onclick="openPopup('Gratis Dessert')">
-              <img src="/image/v7.jpg" alt="Voucher 6">
+              <img src="image/v7.jpg" alt="Voucher 6">
               <div class="voucher-info">
                 <h4>Gratis Dessert</h4>
                 <p>Untuk 3 pengunjung pertama</p>
@@ -436,8 +441,6 @@
     </ul>
   </div>
 </footer>
-
-
   </body>
 
   </html>
